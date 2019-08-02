@@ -1,0 +1,45 @@
+{
+	"name": "yisraelgrimes-site",
+	"private": true,
+	"description": "Personal website for Yisrael Grimes. Built with Gatsby",
+	"version": "0.0.1",
+	"author": "Yisrael Grimes",
+	"keywords": [
+		"gatsby"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yisraelgrimes/yisraelgrimes-site"
+	},
+	"bugs": {
+		"url": "https://github.com/yisraelgrimes/yisraelgrimes-site/issues"
+	},
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"dev": "gatsby develop",
+		"format": "eslint --fix \"./**/*.{js,jsx,json}\"",
+		"start": "yarn dev",
+		"serve": "gatsby serve"
+	},
+	"dependencies": {
+		"gatsby": "^2.13.50",
+		"gatsby-image": "^2.2.8",
+		"gatsby-plugin-manifest": "^2.2.4",
+		"gatsby-plugin-offline": "^2.2.4",
+		"gatsby-plugin-react-helmet": "^3.1.2",
+		"gatsby-plugin-sharp": "^2.2.9",
+		"gatsby-source-filesystem": "^2.1.8",
+		"gatsby-transformer-sharp": "^2.2.5",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-helmet": "^5.2.1"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.2",
+		"eslint": "^6.1.0",
+		"eslint-plugin-json": "^1.4.0",
+		"eslint-plugin-react": "^7.14.3"
+	}
+}

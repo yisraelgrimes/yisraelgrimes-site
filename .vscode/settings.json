@@ -1,0 +1,33 @@
+{
+  "files.exclude": {
+    "node_modules/": false,
+    ".env": false,
+    "sanity.json": false,
+    "lerna.json": false,
+    "netlify.toml": false,
+    "gulpfile.js": false,
+    "package.json": false,
+    "README*.md": false,
+    "readme*.txt": false,
+    "humans.txt": false,
+    "robots.txt": false,
+    ".gitignore": false,
+    ".jshintignore": false,
+    ".eslintignore": false,
+    ".eslintrc.js": false,
+    ".prettierrc": false,
+    ".sass-lint.yml": false,
+    ".editorconfig": false,
+    ".stylishcolors": false,
+    ".pug-lintrc": false,
+    "languages/": false,
+    "LICENSE*": false,
+    "yarn.lock": false,
+    "package-lock.json": false,
+    "*.log": false,
+    ".git/": false,
+    "*.ico": false,
+    "*.png": false,
+    "*.jpg": false
+  }
+}
