@@ -29,5 +29,6 @@
     "*.ico": false,
     "*.png": false,
     "*.jpg": false
-  }
+	},
+	"workbench.colorCustomizations": {}
 }
