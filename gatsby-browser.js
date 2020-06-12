@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// Implement Gatsby's Browser APIs in this file.
+// See: https://www.gatsbyjs.org/docs/browser-apis/
 
-// You can delete this file if you're not using it
+// Importing our basic styles here to be used globally
+import(`./src/styles/main.sass`)

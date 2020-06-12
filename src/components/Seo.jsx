@@ -1,31 +1,27 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+// SEO component that injects site metadata into <head>
 
 import React from "react"
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
-	const { site } = useStaticQuery(
-		graphql`
-			query {
-				site {
-					siteMetadata {
-						title
-						description
-						author
-					}
-				}
+
+const _GET_META = graphql`
+	query {
+		site {
+			siteMetadata {
+				title
+				description
+				author
 			}
-		`
-	);
+		}
+	}
+`
 
-	const metaDescription = description || site.siteMetadata.description;
+
+function SEO({ description, lang, meta, title }) {
+	const { site } = useStaticQuery(_GET_META)
+	const metaDescription = description || site.siteMetadata.description
 
 	return (
 		<Helmet
@@ -36,64 +32,56 @@ function SEO({ description, lang, meta, keywords, title }) {
 			titleTemplate={`%s | ${site.siteMetadata.title}`}
 			meta={[
 				{
-					name: "description",
+					name: `description`,
 					content: metaDescription,
 				},
 				{
-					property: "og:title",
+					property: `og:title`,
 					content: title,
 				},
 				{
-					property: "og:description",
+					property: `og:description`,
 					content: metaDescription,
 				},
 				{
-					property: "og:type",
-					content: "website",
+					property: `og:type`,
+					content: `website`,
 				},
 				{
-					name: "twitter:card",
-					content: "summary",
+					name: `twitter:card`,
+					content: `summary`,
 				},
 				{
-					name: "twitter:creator",
+					name: `twitter:creator`,
 					content: site.siteMetadata.author,
 				},
 				{
-					name: "twitter:title",
+					name: `twitter:title`,
 					content: title,
 				},
 				{
-					name: "twitter:description",
+					name: `twitter:description`,
 					content: metaDescription,
 				},
-			]
-				.concat(
-					keywords.length > 0
-						? {
-							name: "keywords",
-							content: keywords.join(", "),
-						}
-						: []
-				)
-				.concat(meta)}
+			].concat(meta)}
 		/>
-	);
+	)
 }
 
+
 SEO.defaultProps = {
-	lang: "en",
+	lang: `en`,
 	meta: [],
-	keywords: [],
-	description: "",
-};
+	description: ``,
+}
+
 
 SEO.propTypes = {
 	description: PropTypes.string,
 	lang: PropTypes.string,
 	meta: PropTypes.arrayOf(PropTypes.object),
-	keywords: PropTypes.arrayOf(PropTypes.string),
 	title: PropTypes.string.isRequired,
-};
+}
 
-export default SEO;
+
+export { SEO }
