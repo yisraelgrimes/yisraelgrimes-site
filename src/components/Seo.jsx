@@ -19,7 +19,7 @@ const _GET_META = graphql`
 `
 
 
-function SEO({ description, lang, meta, title }) {
+export function SEO({ description, lang, meta, title }) {
 	const { site } = useStaticQuery(_GET_META)
 	const metaDescription = description || site.siteMetadata.description
 
@@ -82,6 +82,3 @@ SEO.propTypes = {
 	meta: PropTypes.arrayOf(PropTypes.object),
 	title: PropTypes.string.isRequired,
 }
-
-
-export { SEO }

@@ -1,7 +1,7 @@
 import React from "react"
 
 
-const InlineLogo = ({ fillColor, title, desc, titleId, ariaHidden, className }) => {
+export function Logo({ fillColor, title, desc, titleId, ariaHidden, className }) {
 	return (
 		<svg
 			aria-labelledby={titleId}
@@ -27,11 +27,8 @@ const InlineLogo = ({ fillColor, title, desc, titleId, ariaHidden, className }) 
 
 // TODO: Add query to get the theme color from 'gatsby-plugin-manifest' option and make it the default fillColor
 
-InlineLogo.defaultProps = {
+Logo.defaultProps = {
 	fillColor: `none`,
 	titleId: `headerLogo`,
 	ariaHidden: `false`,
 }
-
-
-export { InlineLogo }

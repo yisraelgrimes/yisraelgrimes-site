@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Footer = () => {
+export function Footer() {
+
 	return (
 		<footer>
 			<section>
@@ -22,6 +23,3 @@ const Footer = () => {
 		</footer>
 	)
 }
-
-
-export { Footer }

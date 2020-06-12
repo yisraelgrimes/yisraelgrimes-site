@@ -1,11 +1,10 @@
 import React from "react"
 
-import { Layout } from "../components/Layout"
-import { BlogRoll } from "../components/BlogRoll"
+import { Layout, BlogRoll } from "../components"
 
 
 const BlogPage = () => (
-	<Layout title="Blog" withSidebar>
+	<Layout title="Blog">
 		<BlogRoll />
 	</Layout>
 )

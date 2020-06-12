@@ -23,7 +23,7 @@ const _GET_POSTS = graphql`
 `
 
 
-const BlogRoll = () => {
+export function BlogRoll() {
 	const data = useStaticQuery(_GET_POSTS)
 
 	return (
@@ -41,6 +41,3 @@ const BlogRoll = () => {
 		</>
 	)
 }
-
-
-export { BlogRoll }

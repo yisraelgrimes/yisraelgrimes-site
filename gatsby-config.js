@@ -8,34 +8,6 @@ module.exports = {
 		title: `Boilerplate Title`,
 		description: `This is a site description!`,
 		author: `@GrimesClassic`,
-		menuLinks: [
-			{
-				name: `Home`,
-				path: `/`,
-			},
-			{
-				name: `Blog`,
-				path: `/blog`,
-			},
-			{
-				name: `Sidebar Page`,
-				path: `/sidebar-page`,
-			},
-			{
-				name: `Dropdown`,
-				path: `/`,
-				childMenuLinks: [
-					{
-						name: `Link One`,
-						path: `/`,
-					},
-					{
-						name: `Link Two`,
-						path: `/`,
-					},
-				],
-			},
-		],
 	},
 	plugins: [
 		`gatsby-plugin-sitemap`,
