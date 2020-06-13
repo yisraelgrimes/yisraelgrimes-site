@@ -5,7 +5,7 @@
 
 module.exports = {
 	siteMetadata: {
-		title: `Boilerplate Title`,
+		title: `Yisrael Grimes`,
 		description: `This is a site description!`,
 		author: `@GrimesClassic`,
 	},
@@ -50,11 +50,43 @@ module.exports = {
 				// GitHub Flavored Markdown mode (default: true)
 				gfm: true,
 				// Plugins configs
-				plugins: [],
+				plugins: [
+					{
+						// Syntax highlighting for code snippets
+						resolve: `gatsby-remark-vscode`,
+						options: {
+							theme: `SynthWave '84`, // robb0wen/synthwave-vscode
+							extensions: [`synthwave-vscode`],
+						},
+					},
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							// It's important to specify the maxWidth (in pixels) of
+							// the content container as this plugin uses this as the
+							// base for generating different widths of each image.
+							maxWidth: 1500,
+							linkImagesToOriginal: false,
+							withWebp: true,
+						},
+					},
+					{
+						resolve: `gatsby-remark-copy-linked-files`,
+						options: {
+							ignoreFileExtensions: [`png`, `jpg`, `jpeg`],
+						},
+					},
+				],
 			},
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
+		// {
+		// 	resolve: `gatsby-plugin-google-analytics`,
+		// 	options: {
+		// 		trackingId: ``,
+		// 	},
+		// },
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

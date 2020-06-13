@@ -6,19 +6,10 @@ export function Footer() {
 	return (
 		<footer>
 			<section>
-				<h2>Footer Nav Title</h2>
-				<ul>
-					<li><a href="#">External Link</a></li>
-					<li><a href="#">External Link</a></li>
-					<li><Link to="/">Internal Link</Link></li>
-					<li><Link to="/">Internal Link</Link></li>
-				</ul>
-			</section>
-			<section>
-				<h2>Footer Credits</h2>
-				Built with
+				Built with &#9825; by Yisrael Grimes. Powered by Coffee and
 				{` `}
-				<a href="https://www.gatsbyjs.org">Gatsby</a>
+				<a href="https://www.gatsbyjs.org"> Gatsby</a>.
+				| Get in <a href="https://twitter.com/grimesclassic"> touch</a>.
 			</section>
 		</footer>
 	)

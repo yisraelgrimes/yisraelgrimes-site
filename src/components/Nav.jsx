@@ -21,6 +21,7 @@ export function Nav() {
 		<nav className={styles.nav} role="navigation">
 			<ul>
 				<_Item name="Home" path="/" />
+				<_Item name="Me" path="/me" />
 				<_Item name="Blog" path="/blog" />
 			</ul>
 		</nav>

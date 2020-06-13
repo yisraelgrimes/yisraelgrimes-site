@@ -1,17 +1,63 @@
 import React from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import { Layout } from "../components"
 
 
-const IndexPage = () => (
-	<Layout title="Home">
-		<h1>Main Page or Article Heading</h1>
-		<p>As part of the plan to test actual driving emissions, the European Commission intends to phase in over two further years enforcement of the current legal limit on NOx of 80 milligrams a kilometer, an EU official familiar with the matter said last week. Between September 2017 and September 2019, real-driving emissions would be allowed under the commission proposal to exceed permissible discharges in laboratories by as much as 60 percent, according to the official, who spoke on the condition of anonymity.</p>
+export default function IndexPage() {
+	const data = useStaticQuery(_GET_POSTS)
 
-		<h2>Secondary Page or Article Heading</h2>
-		<p>Last year’s General Motors Co. ignition-switch fiasco helped push the total number of recalls in the U.S. to 64 million cars, more than double the previous record. Then Honda Motor Co. paid $70 million for failing to properly report death, injury and warranty data to U.S. regulators.</p>
+	return (
+		<Layout title="Home">
+			<h2>Hello, I'm Yisrael Grimes</h2>
+			<h1>I'm a <Link to="/blog">full-stack designer</Link>, business strategy consultant, and also a few other nouns, but we'll get to that...</h1>
+			<p>oh yeah, and sometimes <Link to="/blog">I write stuff too</Link>.</p>
 
-	</Layout>
-)
+			<section>
+				<h3>Here</h3>
+				<p>This is a place for me to gather the various projects that I’ve worked on, am working on, or will work on, from around the interwebs. A hub, of sorts. It’s also a place for my personal <Link to="/blog">blog</Link> where I write about things like design, business, strategy, or just random thoughts that don’t relate to any specific project.</p>
 
-export default IndexPage
+				<p>If you want to know more about me, then you could start here. Or if you just want to contact me, then go here.</p>
+
+				<p>I'm the Creative Director at Tube Media Co. We're a scrappy little creative agency that focuses on small businesses and startups. If that's you and you want to take your business or idea to the next level, I'd love to chat with you about it.</p>
+			</section>
+
+			<section>
+				<h3>Fresh Off The Blog</h3>
+
+				{data.allMarkdownRemark.edges.map(edge => (
+					<article key={edge.node.frontmatter.slug}>
+						<Link to={`/posts${edge.node.frontmatter.slug}`}>
+							<h2>{edge.node.frontmatter.title}</h2>
+						</Link>
+						<p>{edge.node.frontmatter.date}</p>
+						<p>{edge.node.excerpt}</p>
+						<Link to={`/posts${edge.node.frontmatter.slug}`}>Read More</Link>
+					</article>
+				))}
+
+			</section>
+		</Layout>
+	)
+}
+
+
+const _GET_POSTS = graphql`
+	query RecentPosts {
+		allMarkdownRemark(limit: 3, sort: {
+			order: DESC,
+			fields: [frontmatter___date]
+		}) {
+			edges {
+				node {
+					excerpt
+					frontmatter {
+						date(formatString: "MMMM DD, YYYY")
+						title
+						slug
+					}
+				}
+			}
+		}
+	}
+`

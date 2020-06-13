@@ -1,3 +1,5 @@
+// This is no longer being used, it was moved directly to the blog page
+
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
@@ -30,12 +32,13 @@ export function BlogRoll() {
 		<>
 			{data.allMarkdownRemark.edges.map(edge => (
 				<article key={edge.node.frontmatter.slug}>
-					<Link to={`/posts${edge.node.frontmatter.slug}`}>
+					{/* <Link to={`/posts${edge.node.frontmatter.slug}`}> */}
+					<Link to={edge.node.frontmatter.slug}>
 						<h2>{edge.node.frontmatter.title}</h2>
 					</Link>
 					<p>{edge.node.frontmatter.date}</p>
 					<p>{edge.node.excerpt}</p>
-					<Link to={`/posts${edge.node.frontmatter.slug}`}>Read More</Link>
+					<Link to={edge.node.frontmatter.slug}>Read More</Link>
 				</article>
 			))}
 		</>

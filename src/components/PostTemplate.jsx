@@ -5,7 +5,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Layout } from "."
+import { Layout, Img } from "."
 
 
 // Get this data from the '.md' file
@@ -19,8 +19,16 @@ export const query = graphql`
 			html
 			frontmatter {
 				title
-				date
+				date(formatString: "MMMM DD, YYYY")
 				slug
+				image {
+					childImageSharp {
+						fluid(maxWidth: 1000) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+				alt
 			}
 		}
 	}
@@ -29,10 +37,15 @@ export const query = graphql`
 // Page template for individual blog post
 export default function PostTemplate({data}) {
 	const { markdownRemark } = data
+	const post = markdownRemark.frontmatter
 
 	return (
 		<Layout title="test">
-			<h1>{markdownRemark.frontmatter.title}</h1>
+
+			<h1>{post.title}</h1>
+			<time>{post.date}</time>
+			<Img image={post.image} alt={post.alt} />
+
 			<div dangerouslySetInnerHTML={{
 				__html: markdownRemark.html,
 			}} />
