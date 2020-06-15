@@ -1,0 +1,32 @@
+// Single Post Page Template
+//- -----------------------------------------------------------------
+
+@import 'tools'
+
+
+.excerpt
+	margin-bottom: s(12)
+
+	// Blog index titles
+	h2
+		margin-bottom: -1rem
+		text-align: left
+
+	// home page titles
+	h4
+		margin-bottom: -1.6rem
+
+	p
+		margin: s(2) 0 s(1)
+
+.excerpt:after
+	background: $cl_border
+	height: .1rem
+	width: 30%
+	content: ""
+	display: block
+	margin: s(7) auto
+
+.excerpt:last-child:after
+		height: 0
+		margin-bottom: s(15)

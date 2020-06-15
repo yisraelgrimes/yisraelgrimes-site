@@ -55,7 +55,7 @@ $output_dev_color_classes: false !default;
 $document_font_size: 62.5% !default;
 
 // Base Font-Size
-$base_font_size: 1.6rem !default;
+$base_font_size: 2.4rem !default;
 
 // How much things like lists and blockquotes are indented.
 $base_indent_amount: 4rem !default;
@@ -69,13 +69,6 @@ $base_indent_amount: 4rem !default;
 ///
 $img_base_path: '../images' !default;
 
-/// ## Font Asset-Path
-/// Path to your fonts directory from your compiled `.css` file
-/// Modify this variable in your global settings file.
-/// Make sure to remove `!default` to override Luscious.
-/// @see {function} font
-///
-$font_base_path: '../fonts' !default;
 
 // -------------------------------------
 // 3. Colors
@@ -85,50 +78,52 @@ $font_base_path: '../fonts' !default;
 // Grey Scale
 $cl_black  : #1f2d3d !default;
 $cl_dark   : #3c4858 !default;
-$cl_middle : #8492a6 !default;
-$cl_light  : #eff2f7 !default;
+$cl_middle : #4e5d71 !default;
+$cl_light  : transparentize($cl_middle, .8) !default;
 $cl_white  : #f9fafc !default;
 
 // Brand
-$cl_primary   :   #1fb6ff !default;
-$cl_primary-dk:   #009eeb !default;
-$cl_primary-lt:   #85d7ff !default;
-$cl_secondary :   #f24878 !default;
-$cl_secondary-dk: #ef1855 !default;
-$cl_secondary-lt: #f5789b !default;
-
-// Feedback
-$cl_success   : #13ce66 !default;
-$cl_warning   : #ffc82c !default;
-$cl_alert     : #ff4949 !default;
+$cl_accent : #1fc8db !default;
 
 // ----------------
 // UI Colors: These colors are used throughout the project files
 
 // Default
 $cl_bg              : $cl_white      !default;
-$cl_text            : $cl_black      !default;
+$cl_text            : $cl_middle      !default;
+$cl_text_heading    : $cl_dark      !default;
 $cl_border          : $cl_light      !default;
 $cl_text-highlight  : #ff0         !default;
-$cl_link            : $cl_primary    !default;
-$cl_link-hover      : $cl_primary-dk !default;
+$cl_link            : $cl_text       !default;
+$cl_link-hover      : $cl_accent     !default;
+
+// Remove the default underline and make a fancy looking one
+// TODO Add transition timing for hover
+@mixin cl_fancy_link($state: null) {
+	text-decoration: none;
+
+	@if $state == "reset" {
+		background-image: none;
+	} @else if $state == "hover" {
+		background-image: linear-gradient(180deg,transparent 85%,transparentize($cl_accent, .2) 0);
+	} @else {
+		background-image: linear-gradient(180deg,transparent 70%,transparentize($cl_accent, .2) 0);
+	}
+}
+
 
 // Nav
-$cl_nav-bg          : $cl_text       !default;
-$cl_nav-text        : $cl_bg         !default;
-$cl_nav-active      : $cl_secondary  !default;
-
-// Icons
-$cl_icon-border     : $cl_white      !default;
-$cl_icon-inverse    : $cl_white      !default;
+$cl_nav-bg          : transparentize($cl_bg, .2)    !default;
+$cl_nav-text        : $cl_dark      !default;
+$cl_nav-hover      : lighten($cl_middle, 20%)  !default;
+$cl_nav-active      : $cl_middle  !default;
+$cl_footer_bg       : $cl_black !default;
+$cl_footer_text       : transparentize($cl_bg, .4) !default;
 
 // Buttons
 $btn_text-primary       : $cl_white      !default;
-$btn_bg-primary         : $cl_primary    !default;
-$btn_bg-primary-hover   : $cl_primary-dk !default;
-$btn_text-secondary     : $cl_white      !default;
-$btn_bg-secondary       : $cl_secondary  !default;
-$btn_bg-secondary-hover : $cl_secondary-dk  !default;
+$btn_bg-primary         : $cl_accent    !default;
+$btn_bg-primary-hover   : darken($cl_accent, 10%) !default;
 
 // This map makes the color-profiles available in `+btn()` mixin.
 // To add more profiles, just add another array to
@@ -142,14 +137,6 @@ $btn-colors: (
 		hover-background: $btn_bg-primary-hover,
 		hover-border: transparent
 	),
-	secondary: (
-		color: $btn_text-secondary,
-		background: $btn_bg-secondary,
-		border: transparent,
-		hover-color: $btn_text-secondary,
-		hover-background: $btn_bg-secondary-hover,
-		hover-border: transparent
-	)
 ) !default;
 
 // ------------------------------------
@@ -183,24 +170,25 @@ $base_animation: all $base_delay $base_timing !default;
 // -----------------
 // Default Body
 $font_stack_body: (
-	'Open Sans',
-	'Helvetica Neue',
-	'Helvetica',
-	'Arial',
+	'Cormorant Garamond',
+	'Garamond',
+	'Cambria',
+	'Georgia',
 	sans-serif
 	) !default;
 
 // Default Headings
 $font_stack_heading: (
-	'Open Sans',
-	'Helvetica Neue',
-	'Helvetica',
+	'Fira Sans',
+	'Century Gothic',
+	'AppleGothic',
 	'Arial',
 	sans-serif
 	) !default;
 
 // Default Code/Monospace
 $font_stack_code: (
+	'Fira Code',
 	'Courier New',
 	'Courier',
 	'Lucida Typewriter',
@@ -215,6 +203,12 @@ $modularscale     : (
 	base: $base_font_size,
 	ratio: 1.33
 ) !default;
+
+
+@function s($increment: 0) {
+	$base: .4rem;
+	@return $increment * $base;
+}
 
 // -------------------------------------
 // 7. Breakpoints

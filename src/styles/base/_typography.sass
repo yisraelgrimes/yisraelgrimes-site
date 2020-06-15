@@ -7,7 +7,7 @@ html
 	// @nrml: Change the default font family in all browsers (opinionated).
 	font-family: $font_stack_body
 	// @nrml: Correct the line height in all browsers.
-	line-height: 2.4rem
+	line-height: s(6)
 	// @nrml: Prevent adjustments of font size
 	// after orientation changes in iOS.
 	-webkit-text-size-adjust: 100%
@@ -16,11 +16,15 @@ html
 
 body
 	font-size: $base_font_size
+	line-height: s(8)
+	color: $cl_text
+	font-weight: 300
 
 
 p
 	margin: 0 0 1.6rem
 	padding: 0
+
 
 
 // ------------------------------------
@@ -32,9 +36,10 @@ a
 	// @nrml: Remove gaps in links underline in iOS 8+ and Safari 8+.
 	-webkit-text-decoration-skip: objects
 	color: $cl_link
-
+	transition: $base_animation
+	+cl_fancy_link
 	&:hover
-		color: $cl_link-hover
+		+cl_fancy_link("hover")
 
 
 // ------------------------------------
@@ -54,7 +59,7 @@ ul
 // blockquote
 // ------------------------------------
 blockquote
-	margin: 1.6rem $base_indent_amount
+	margin: s(4) $base_indent_amount
 
 
 // ------------------------------------
@@ -65,7 +70,7 @@ sup
 	// @nrml: Prevent elements from affecting
 	// the line height in all browsers.
 	line-height: 0
-	font-size: ms(-1)
+	font-size: s(-2)
 	position: relative
 	vertical-align: baseline
 
@@ -86,7 +91,7 @@ samp
 	// @nrml: Correct the inheritance and scaling of font size in all browsers.
 	font-family: $font_stack_code
 	// @nrml: Correct the odd `em` font sizing in all browsers.
-	font-size: $base_font_size
+	font-size: s(5)
 
 pre
 	line-height: 2.4rem
@@ -130,3 +135,10 @@ abbr[title]
 	// @nrml: Add the correct text decoration in
 	// Chrome, Edge, IE, Opera, and Safari. ---
 	text-decoration: underline dotted
+
+
+time
+	font-size: s(4)
+	font-family: $font_stack_heading
+	font-weight: 300
+	color: transparentize($cl_middle, .4)

@@ -1,6 +1,64 @@
 
 @import 'tools'
 
+// ------------------------------------
+// Utils
+// ------------------------------------
+
+// Breakpoint Mixin Alias
+// =_bp
+// 	+bp(800px)
+// 		@content
+
+// Nav Height
+$_nav-height: 5rem
+
+
+// ------------------------------------
+// Styles
+// ------------------------------------
+
+.header
+	margin-top: 6rem
+
+
+.nav
+	height: $_nav-height
+	background: $cl_nav-bg
+	// background: #ddd
+	position: fixed
+	top: 0
+	left: 0
+	padding: 0 s(5)
+
+	ul
+		margin: 0
+		padding: 0
+
+	ul > li
+		display: inline-block
+
+	ul a
+		padding: 0 s(5)
+		display: block
+		line-height: $_nav-height
+		text-transform: uppercase
+		font-size: s(5)
+		font-family: $font_stack_heading
+		color: $cl_nav-text
+		transition: $base_animation
+		+cl_fancy_link("reset")
+		&:hover
+			color: $cl_nav-hover
+			background-image: linear-gradient(0deg,transparent 85%,transparentize($cl_accent, .2) 0);
+			// TODO: Add an "active" state-class that has the same bg image
+
 
 .logo
-	+square(8rem)
+	+square(12rem)
+	margin: 0 auto
+
+	a
+		+cl_fancy_link("reset")
+		&:hover
+			+cl_fancy_link("reset")

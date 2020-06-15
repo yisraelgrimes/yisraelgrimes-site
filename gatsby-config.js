@@ -23,6 +23,27 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			options: {
+				fonts: [
+					{
+						family: `Cormorant Garamond`,
+						variants: [`300`, `300i`, `400`, `400i`, `600`, `600i`, `700`, `700i`],
+						// not using: `300i`, `400`, `400i`, `600`, `600i`, `700`, `700i`
+					},
+					{
+						family: `Fira Sans`,
+						variants: [`100`, `300`, `300i`, `400`, `600`, `700`],
+						// not using: `100`, `300i`, `700`
+					},
+					{
+						family: `Fira Code`,
+						variants: [`400`],
+					},
+				],
+			},
+		},
+		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `posts`,

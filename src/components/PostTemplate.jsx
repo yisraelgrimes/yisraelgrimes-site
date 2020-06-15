@@ -8,6 +8,26 @@ import { graphql } from "gatsby"
 import { Layout, Img } from "."
 
 
+// Page template for individual blog post
+export default function PostTemplate({data}) {
+	const { markdownRemark } = data
+	const post = markdownRemark.frontmatter
+
+	return (
+		<Layout title="test">
+
+			<h1>{post.title}</h1>
+			<time>{post.date}</time>
+			<Img image={post.image} alt={post.alt} />
+
+			<div dangerouslySetInnerHTML={{
+				__html: markdownRemark.html,
+			}} />
+		</Layout>
+	)
+}
+
+
 // Get this data from the '.md' file
 export const query = graphql`
 	query PostListQuery($slug: String!) {
@@ -33,22 +53,3 @@ export const query = graphql`
 		}
 	}
 `
-
-// Page template for individual blog post
-export default function PostTemplate({data}) {
-	const { markdownRemark } = data
-	const post = markdownRemark.frontmatter
-
-	return (
-		<Layout title="test">
-
-			<h1>{post.title}</h1>
-			<time>{post.date}</time>
-			<Img image={post.image} alt={post.alt} />
-
-			<div dangerouslySetInnerHTML={{
-				__html: markdownRemark.html,
-			}} />
-		</Layout>
-	)
-}

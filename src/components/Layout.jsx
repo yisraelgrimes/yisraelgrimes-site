@@ -4,22 +4,22 @@ import PropTypes from "prop-types"
 
 import { Header, Footer, SEO } from "."
 
-import skipStyles from "./skiplink.module.sass"
+import styles from "./layout.module.sass"
 
 
-export function Layout({ title, children }) {
+export function Layout({ title, children, pageClass }) {
 	return (
 		<>
 			<SEO title={title} />
 
 			{/* Accessibility Skiplink */}
-			<a className={skipStyles.container} href="#scroll-main">
+			<a className={styles.skiplink} href="#scroll-main">
 					Jump to main content.
 			</a>
 
 			<Header />
 
-			<main id="scroll-main" role="main">
+			<main className={styles.main} id="scroll-main" role="main">
 				{children}
 			</main>
 

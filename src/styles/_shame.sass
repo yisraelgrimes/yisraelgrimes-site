@@ -9,5 +9,36 @@
 //
 // ===================================================================
 
-// .test
-// 	line-height: r(1)
+
+// TODO: Add this as a dev variable in luscious
+=psuedo-style($tag)
+	content: '<#{$tag}>'
+	color: transparentize(red, .4)
+	font-family: $font_stack_code
+	font-size: .5em
+	font-weight: 300
+
+
+h1:after
+	+psuedo-style("h1")
+
+h2:after
+	+psuedo-style("h2")
+
+h3:after
+	+psuedo-style("h3")
+
+h4:after
+	+psuedo-style("h4")
+
+h5:after
+	+psuedo-style("h5")
+
+h6:after
+	+psuedo-style("h6")
+
+p:after
+	+psuedo-style("p")
+
+time:after
+	+psuedo-style("time")
