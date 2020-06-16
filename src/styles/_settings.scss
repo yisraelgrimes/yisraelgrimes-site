@@ -76,11 +76,12 @@ $img_base_path: '../images' !default;
 // Base: All Project colors are built using these.
 
 // Grey Scale
-$cl_black  : #1f2d3d !default;
+// $cl_black  : #1f2d3d !default;
+$cl_black  : #333 !default;
 $cl_dark   : #3c4858 !default;
 $cl_middle : #4e5d71 !default;
 $cl_light  : transparentize($cl_middle, .8) !default;
-$cl_white  : #f9fafc !default;
+$cl_white  : #ffffff !default;
 
 // Brand
 $cl_accent : #1fc8db !default;
