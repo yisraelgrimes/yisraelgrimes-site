@@ -13,13 +13,22 @@ export default function MePage({ data }) {
 				<h1>About Me</h1>
 			</header>
 
-			<p>In case you haven't figured out by now, my name is Yisrael. It looks a little odd on paper, or screen, I guess, but just pronounce it like the country and you'll be golden.</p>
+			{/* <p>In case you haven't figured out by now, my name is Yisrael. It looks a little odd on paper, or screen, I guess, but just pronounce it like the country and you'll be golden.</p>
 
-			<Img image={data.yis} alt="Yisrael leaning against a car in the sunlight" />
+			<Img className="about-me-img" image={data.yis} alt="Yisrael leaning against a car in the sunlight" /> */}
+
+			<p>
+				<Img className="about-me-img" image={data.yis} alt="Yisrael leaning against a car in the sunlight" />
+
+			In case you haven't figured out by now, my name is Yisrael. It looks a little odd on paper, or screen, I guess, but just pronounce it like the country and you'll be golden.
+
+
+
+			</p>
 
 			<p>I’m a full-stack designer and a business strategy consultant. I work with overworked and overwhelmed small business owners, start-ups, and entrepreneurs all over the world to figure out how to grow their businesses in the digital space. Most of this work is done through a scrappy little marketing agency I head up called Tube Media Co. If you run a business and are tired of worrying about the marketing or design side of things and just want to get back to doing what you love, then Tube Media is a good place to start.</p>
 
-			ellipses here
+			<hr />
 
 			<p>When I was 18 I had an idea for a niche business that catered to the local skateboarding community. It was a great idea, but I knew nothing about business, marketing, or pretty much anything else that you should know if you want to start a business, let alone make it successful. As you can imagine, the business failed, hard. So I re-focused on college and trying to fit in with what everyone else told me I should be doing, the stuff that “successful” people do. But I was never happy filling the typical employee role. I wanted to change and improve the way people do business and my history of employment told me that most people don’t want employees rocking the boat. They wanted content employees that would show up and do what they are told, regardless of how muchÂ room for improvement was available.</p>
 
@@ -50,14 +59,14 @@ export default function MePage({ data }) {
 
 
 export const query = graphql`
-  query {
-    yis: file(relativePath: { eq: "yisrael-grimes-car.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+	query {
+		yis: file(relativePath: { eq: "yisrael-grimes-car.jpg" }) {
+			childImageSharp {
+				fluid(maxWidth: 500) {
+					...GatsbyImageSharpFluid
 					...GatsbyImageSharpFluidLimitPresentationSize
-        }
-      }
-    }
-  }
+				}
+			}
+		}
+	}
 `
