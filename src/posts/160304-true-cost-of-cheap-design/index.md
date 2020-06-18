@@ -1,0 +1,38 @@
+---
+slug: "/true-cost-of-cheap-web-design"
+title: "The True Cost of a Cheap Website Design"
+date: "2016-03-04"
+image: "cheap-web-design.jpg"
+alt: "Person sitting in front of their MacBook Pro"
+---
+
+When it comes to hiring a website designer, the phrase “You get what you pay for” couldn’t be more appropriate. Considering that your business’s revenue is at stake, do you really want to join the race to the bottom by hiring the cheapest designer you can find? Or worse, someone with no experience at all?
+
+We had a potential client contact us earlier this year looking for a redesign of their website. We did our initial consultation with them over the phone to get more detail and see if we were a good fit for helping them. Their current website —in their own words— was outdated, had typos, incorrect or missing information, and some parts of the site were no longer functioning. Did I mention that they were not getting any traffic to their website and therefore, they were not getting any customers from it?
+
+### How Much Was this Awesome Website costing them?
+
+$15 per month. Yep, that’s not a typo. For the price of 1 movie ticket and some popcorn, they were trusting a company they had never even met with the success of the online portion of their business. I’m not sure exactly how much they paid up front for the initial design and set up of their website, but from what I gathered, it was pretty low.
+
+### How Much Was this Website ACTUALLY Costing Them?
+
+By our estimation, they were losing thousands of dollars a month to their competitors. The [Customer Lifetime Value](/customer-lifetime-value) of each customer was around $6000! So, if they missed out on just ONE customer per month because that customer couldn’t find them online or became frustrated with their website and went to someone else’s… well, you can see how quickly the cost adds up.
+
+In addition to losing potential revenue, doing their own updates meant that they had to stop what they were doing (running the business) and take the time to figure out how to update their site. This is even more lost profits.
+
+It would’ve been cheaper and a whole lot less stressful for them to just hire a pro.
+
+### How You Can Avoid the Expensive Problem of Cheap Websites.
+
+Just hiring a professional designer doesn’t necessarily mean that you are going to have a successful website. Like anything in business, there are no guarantees. But by approaching it with the right mindset and the right people, you increase your chances of success greatly!
+
+1. **Think of it as an investment.** A website for your business is an investment, not just an expense. The future (and arguably, the present) of business is online and the majority of your customers are [already there](https://www.hubspot.com/marketing-statistics). If you’re serious about your business, then you need to be investing in its future.
+2. **Hire a professional.** As a small business owner, you probably won’t have to take out a second mortgage on your house to get a great professional website built for you. But it should probably cost more than your date last Friday night.
+3. **Be willing to pay your professional what they are worth.** Great websites are like great meals. They don’t come from cheap, crappy ingredients and they take longer than 3 minutes in the microwave to cook. Creating a website that solves your business problems and meets its goals requires research, thought, and a lot of detailed work that you will likely never even know about because it would bore you to tears. The actual part of the website that most people ever see is truly just the tip of the iceberg. Think about how much additional revenue a successful website could bring to your business or think about how much a bad website could hurt it. Now you know how much a good professional is worth to you.
+4. **Trust the professional you hire.** You hired them for a reason. It’s the same reason that you go to a doctor when you find a weird growth on your back, even though you could “technically” chop it off yourself with a steak knife.
+
+Your website should be your hardest working employee and is often your customer’s first experience with your company. Remember: in the race to the bottom, there is no such thing as a winner.
+
+#### Question to You:
+
+What’s your experience been like trying to get a website going for your business? Did you build it yourself? Hire a pro? Let us know in the comments!
