@@ -2,9 +2,9 @@
 slug: "/true-cost-of-cheap-web-design"
 title: "The True Cost of a Cheap Website Design"
 date: "2016-03-04"
-image: "cheap-web-design.jpg"
-alt: "Person sitting in front of their MacBook Pro"
 ---
+
+![Person sitting in front of their MacBook Pro](cheap-web-design.jpg)
 
 When it comes to hiring a website designer, the phrase “You get what you pay for” couldn’t be more appropriate. Considering that your business’s revenue is at stake, do you really want to join the race to the bottom by hiring the cheapest designer you can find? Or worse, someone with no experience at all?
 

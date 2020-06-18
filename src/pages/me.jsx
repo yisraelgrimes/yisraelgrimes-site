@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import { Layout, Img } from "../components"
 
 
-
 export default function MePage({ data }) {
 
 	return (
