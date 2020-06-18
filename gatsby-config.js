@@ -6,6 +6,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Yisrael Grimes`,
+		siteUrl: `https://yisraelgrimes.com`,
 		description: `This is a site description!`,
 		author: `@GrimesClassic`,
 	},
