@@ -4,12 +4,28 @@ import React from 'react'
 import { default as GatsbyImage } from 'gatsby-image'
 
 
-export function Img({ image, ...props }) {
+export function Img({ image, caption, children, ...props }) {
+	const imageCaption = caption || children
 	if (!image) {
 		return null
 	}
-	if (image.extension === `gif`) {
-		return <img src={image.publicURL} {...props} />
-	}
-	return <GatsbyImage fluid={image.childImageSharp.fluid} {...props} />
+	return (
+		<figure>
+			{(image.extension === `gif`) ? (
+				<img src={image.publicURL} {...props} />
+			):(
+				<GatsbyImage fluid={image.childImageSharp.fluid} {...props} />
+			)}
+
+			{(imageCaption && <figcaption>{imageCaption}</figcaption>)}
+
+		</figure>
+	)
 }
+
+
+
+// if (image.extension === `gif`) {
+// 	return <img src={image.publicURL} {...props} />
+// }
+// return <GatsbyImage fluid={image.childImageSharp.fluid} {...props} />
