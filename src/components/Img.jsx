@@ -22,10 +22,3 @@ export function Img({ image, caption, children, ...props }) {
 		</figure>
 	)
 }
-
-
-
-// if (image.extension === `gif`) {
-// 	return <img src={image.publicURL} {...props} />
-// }
-// return <GatsbyImage fluid={image.childImageSharp.fluid} {...props} />
