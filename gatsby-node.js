@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
 				createPage({
 					// path: `/posts${node.frontmatter.slug}`,
 					path: node.frontmatter.slug,
-					component: path.resolve(`./src/components/SinglePostTemplate.jsx`),
+					component: path.resolve(`./src/components/PostTemplate.jsx`),
 					context: {
 						slug: node.frontmatter.slug,
 					},

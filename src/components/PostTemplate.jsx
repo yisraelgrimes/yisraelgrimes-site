@@ -9,7 +9,7 @@ import { Layout, Img } from "."
 
 
 // Page template for individual blog post
-export default function SinglePostTemplate({data}) {
+export default function PostTemplate({data}) {
 	const { markdownRemark } = data
 	const post = markdownRemark.frontmatter
 
@@ -18,7 +18,7 @@ export default function SinglePostTemplate({data}) {
 
 			{post.title && <h1>{post.title}</h1>}
 			{post.date && <time>{post.date}</time>}
-			{post.image && <Img image={post.image} alt={post.alt} />}
+			{/* {post.image && <Img image={post.image} alt={post.alt} />} */}
 
 			<div dangerouslySetInnerHTML={{
 				__html: markdownRemark.html,
@@ -31,7 +31,7 @@ export default function SinglePostTemplate({data}) {
 
 // Get this data from the '.md' file
 export const query = graphql`
-	query SinglePostQuery($slug: String!) {
+	query PostQuery($slug: String!) {
 		markdownRemark(frontmatter: {
 			slug: {
 				eq: $slug
@@ -42,14 +42,14 @@ export const query = graphql`
 				title
 				date(formatString: "MMMM DD, YYYY")
 				slug
-				image {
-					childImageSharp {
-						fluid(maxWidth: 1000) {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-				alt
+				# image {
+				# 	childImageSharp {
+				# 		fluid(maxWidth: 1000) {
+				# 			...GatsbyImageSharpFluid
+				# 		}
+				# 	}
+				# }
+				# alt
 			}
 		}
 	}
