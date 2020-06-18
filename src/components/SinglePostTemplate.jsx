@@ -9,20 +9,21 @@ import { Layout, Img } from "."
 
 
 // Page template for individual blog post
-export default function PostTemplate({data}) {
+export default function SinglePostTemplate({data}) {
 	const { markdownRemark } = data
 	const post = markdownRemark.frontmatter
 
 	return (
-		<Layout title="test">
+		<Layout title="test" pageClass="post">
 
-			<h1>{post.title}</h1>
-			<time>{post.date}</time>
-			<Img image={post.image} alt={post.alt} />
+			{post.title && <h1>{post.title}</h1>}
+			{post.date && <time>{post.date}</time>}
+			{post.image && <Img image={post.image} alt={post.alt} />}
 
 			<div dangerouslySetInnerHTML={{
 				__html: markdownRemark.html,
 			}} />
+
 		</Layout>
 	)
 }
@@ -30,7 +31,7 @@ export default function PostTemplate({data}) {
 
 // Get this data from the '.md' file
 export const query = graphql`
-	query PostListQuery($slug: String!) {
+	query SinglePostQuery($slug: String!) {
 		markdownRemark(frontmatter: {
 			slug: {
 				eq: $slug

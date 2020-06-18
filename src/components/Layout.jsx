@@ -19,7 +19,7 @@ export function Layout({ title, children, pageClass }) {
 
 			<Header />
 
-			<main className={styles.main} id="scroll-main" role="main">
+			<main className={`${styles.main} ${pageClass}`} id="scroll-main" role="main">
 				{children}
 			</main>
 
