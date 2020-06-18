@@ -14,7 +14,7 @@ export default function PostTemplate({data}) {
 	const post = markdownRemark.frontmatter
 
 	return (
-		<Layout title="test" pageClass="post">
+		<Layout title={post.title} pageClass="post">
 
 			{post.title && <h1>{post.title}</h1>}
 			{post.date && <time>{post.date}</time>}
