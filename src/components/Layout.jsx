@@ -2,7 +2,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Header, Footer, SEO } from "."
+import { Header, Footer, Seo } from "."
 
 import styles from "./layout.module.sass"
 
@@ -10,7 +10,7 @@ import styles from "./layout.module.sass"
 export function Layout({ title, children, pageClass }) {
 	return (
 		<>
-			<SEO title={title} />
+			<Seo title={title} />
 
 			{/* Accessibility Skiplink */}
 			<a className={styles.skiplink} href="#scroll-main">
