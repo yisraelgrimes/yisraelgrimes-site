@@ -1,9 +1,8 @@
 ---
-slug: "/sunk-cost"
-title: "Development & The Sunk-Cost Fallacy"
-date: "2020-04-20"
+slug: /sunk-cost
+title: Development & The Sunk-Cost Fallacy
+date: 2020-04-20
 ---
-
 
 
 ## What Building Software & Riding a Motorcycle Have in Common
