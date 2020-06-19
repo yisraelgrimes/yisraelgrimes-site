@@ -1,8 +1,10 @@
 ---
-slug: "/why-im-a-full-stack-designer"
-title: "Why I’m a Full-Stack Designer"
-date: "2016-02-21"
+slug: /why-im-a-full-stack-designer
+title: Why I’m a Full-Stack Designer
+date: 2016-02-21
+status: hidden
 ---
+
 
 Let me start by stating that I’m not a fan of the ridiculous job titles that many people in my industry claim. Let’s chill with the “Design Guru, Creative Evangelist, and VP of Awesomesauce (or whatever)” job titles. When it comes to designer job titles, part of me wants to side with people like Mike Monteiro and the idea that we are all just designers, we design things, we don’t need fancy titles other than “Designer.” But by introducing yourself to someone as a designer, the only thing you’ve told them is you can probably put together a matching outfit. On the flip-side, keeping things generic can be a security blanket. Even if it’s just one of those blankets that’s too scratchy and never keeps you at a comfortable temperature.
 

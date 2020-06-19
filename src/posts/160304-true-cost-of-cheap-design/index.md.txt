@@ -1,8 +1,10 @@
 ---
-slug: "/true-cost-of-cheap-web-design"
-title: "The True Cost of a Cheap Website Design"
-date: "2016-03-04"
+slug: /true-cost-of-cheap-web-design
+title: The True Cost of a Cheap Website Design
+date: 2016-03-04
+status: draft
 ---
+
 
 ![Person sitting in front of their MacBook Pro](cheap-web-design.jpg)
 

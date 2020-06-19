@@ -1,9 +1,8 @@
 ---
-slug: "/"
-title: "Hiring A Web Designer- Budgeting"
-date: "2016-03-04"
-image: ""
-alt: ""
+slug: /hiriring-a-developer
+title: Hiring A Web Designer- Budgeting
+date: 2016-03-04
+status: draft
 ---
 
 

@@ -1,0 +1,9 @@
+---
+slug: /template
+title: Template
+date: 2020-01-01
+status: draft
+---
+
+
+This is a post template. When you're ready to publish, just remove the "status" from the frontmatter.
