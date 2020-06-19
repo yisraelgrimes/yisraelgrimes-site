@@ -21,10 +21,15 @@ export default function BlogPage({ data }) {
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(limit: 5, sort: {
-			order: DESC,
-			fields: [frontmatter___date]
-		}) {
+		allMarkdownRemark(
+			filter: {
+				frontmatter: {status: {ne: "hidden"}}
+			}
+			limit: 5, sort: {
+				order: DESC,
+				fields: [frontmatter___date]
+			}
+		) {
 			edges {
 				node {
 					excerpt

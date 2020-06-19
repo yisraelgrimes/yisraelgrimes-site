@@ -52,10 +52,15 @@ export default function IndexPage() {
 
 const _GET_POSTS = graphql`
 	query RecentPosts {
-		allMarkdownRemark(limit: 3, sort: {
-			order: DESC,
-			fields: [frontmatter___date]
-		}) {
+		allMarkdownRemark(
+			filter: {
+				frontmatter: {status: {ne: "hidden"}}
+			}
+			limit: 3, sort: {
+				order: DESC,
+				fields: [frontmatter___date]
+			}
+		) {
 			edges {
 				node {
 					excerpt
@@ -63,6 +68,7 @@ const _GET_POSTS = graphql`
 						date(formatString: "MMMM DD, YYYY")
 						title
 						slug
+						status
 					}
 				}
 			}

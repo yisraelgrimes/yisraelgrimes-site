@@ -12,11 +12,16 @@ exports.createPages = ({ graphql, actions }) => {
 
 		graphql(`
 			{
-				allMarkdownRemark {
+				allMarkdownRemark(
+					filter: {
+						frontmatter: {status: {ne: "draft"}}
+					}
+				) {
 					edges {
 						node {
 							frontmatter {
 								slug
+								status
 							}
 						}
 					}
@@ -25,14 +30,16 @@ exports.createPages = ({ graphql, actions }) => {
 		`).then(results => {
 
 			results.data.allMarkdownRemark.edges.forEach(({node}) => {
-				createPage({
-					// path: `/posts${node.frontmatter.slug}`,
-					path: node.frontmatter.slug,
-					component: path.resolve(`./src/components/PostTemplate.jsx`),
-					context: {
-						slug: node.frontmatter.slug,
-					},
-				})
+				// Only create posts that are not labeled as drafts
+				if (node.frontmatter.status !== `draft`) {
+					createPage({
+						path: node.frontmatter.slug,
+						component: path.resolve(`./src/components/PostTemplate.jsx`),
+						context: {
+							slug: node.frontmatter.slug,
+						},
+					})
+				}
 			})
 			resolve()
 
