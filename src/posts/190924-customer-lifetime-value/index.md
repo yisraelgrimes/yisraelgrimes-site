@@ -43,5 +43,7 @@ Let’s assume it costs Carl $30 per customer per month to run his business and 
 
 Knowing that Carl’s CLV is $2800 ($700 per year) means that as long as Carl spends less than $700 to get new customers, he will be profitable. (Obviously, we are not accounting for salaries and what not. We're keeping it simple, right?)
 When you want to market and grow your business, this is super helpful to know. And if you are throwing marketing dollars out there without this kind of information, you are shooting blind and just hoping for success.
+
 Knowing his CLV, Carl can safely run a promotion for 2 months of free lawn care because he knows that he will still profit $440 that first year and $700 per year after that. Or he could budget a $9000 website project which could bring in a huge number of new customers because if it brings just four, then it's already paid for itself. Just think, what if his website helped bring in just 10 new customers? That’s an extra $40k in revenue and $19k in profit! I believe the technical term for this kind of ROI is… awesome.
+
 A big reason that I ask my clients questions like this is because I want to make sure they are profitable. Helping my clients stay in business IS my business. Granted, like everything else in business, there’re no guarantees that something will work. But with staying on top of things like customer lifetime value, you are able to minimize your risk significantly and put your resources where they count the most.
